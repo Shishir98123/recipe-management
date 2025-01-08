@@ -14,7 +14,7 @@ def recipe_add(request):
         if form.is_valid():
             form.save()
             return redirect('recipe_list')
-        else:
+    else:
          form = RecipeForm()
     return render (request, 'recipes/recipe_add.html', {'form': form})
       
