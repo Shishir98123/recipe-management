@@ -16,7 +16,7 @@ def recipe_add(request):
             return redirect('recipe_list')
         else:
          form = RecipeForm()
-         return render (request, 'recipes/recipe_form.html', {'form': form})
+    return render (request, 'recipes/recipe_add.html', {'form': form})
       
 def recipe_edit(request, pk):
    recipe = get_object_or_404(Recipe, pk=pk)
